@@ -14,9 +14,9 @@ public class Cidade implements Serializable {
 	
 	private Integer Id;
 	
-	private Integer Nome;
+	private String Nome;
 	
-	private Integer Estado;
+	private Estado estado;
 
 	/**
 	 * 
@@ -43,38 +43,38 @@ public class Cidade implements Serializable {
 	/**
 	 * @return the nome
 	 */
-	public Integer getNome() {
+	public String getNome() {
 		return Nome;
 	}
 
 	/**
 	 * @param nome the nome to set
 	 */
-	public void setNome(Integer nome) {
+	public void setNome(String nome) {
 		Nome = nome;
 	}
 
 	/**
 	 * @return the estado
 	 */
-	public Integer getEstado() {
-		return Estado;
+	public Estado getEstado() {
+		return estado;
 	}
 
 	/**
 	 * @param estado the estado to set
 	 */
-	public void setEstado(Integer estado) {
-		Estado = estado;
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Estado == null) ? 0 : Estado.hashCode());
 		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
 		result = prime * result + ((Nome == null) ? 0 : Nome.hashCode());
+		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
 		return result;
 	}
 
@@ -87,11 +87,6 @@ public class Cidade implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Cidade other = (Cidade) obj;
-		if (Estado == null) {
-			if (other.Estado != null)
-				return false;
-		} else if (!Estado.equals(other.Estado))
-			return false;
 		if (Id == null) {
 			if (other.Id != null)
 				return false;
@@ -102,7 +97,17 @@ public class Cidade implements Serializable {
 				return false;
 		} else if (!Nome.equals(other.Nome))
 			return false;
+		if (estado == null) {
+			if (other.estado != null)
+				return false;
+		} else if (!estado.equals(other.estado))
+			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Cidade [Id=%s, Nome=%s, estado=%s]", Id, Nome, estado);
 	}
 
 }

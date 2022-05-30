@@ -83,4 +83,9 @@ public class Pais implements Serializable {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Pais [id=%s, nome=%s]", id, nome);
+	}
 }

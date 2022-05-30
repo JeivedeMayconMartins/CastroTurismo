@@ -9,7 +9,7 @@ public abstract class Pessoa implements Serializable {
 	
 	private Integer Id;
 	
-	private Integer Numero;
+	private String Numero;
 	
 	private String Telefone;
 	
@@ -48,14 +48,14 @@ public abstract class Pessoa implements Serializable {
 	/**
 	 * @return the numero
 	 */
-	public Integer getNumero() {
+	public String getNumero() {
 		return Numero;
 	}
 
 	/**
 	 * @param numero the numero to set
 	 */
-	public void setNumero(Integer numero) {
+	public void setNumero(String numero) {
 		Numero = numero;
 	}
 

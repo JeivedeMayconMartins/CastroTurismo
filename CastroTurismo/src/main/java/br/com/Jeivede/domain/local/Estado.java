@@ -103,6 +103,11 @@ public class Estado implements Serializable {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Estado [id=%s, nome=%s, pais=%s]", id, nome, pais);
+	}
 	
 
 }

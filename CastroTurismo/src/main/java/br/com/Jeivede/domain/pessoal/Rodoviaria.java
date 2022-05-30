@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  */
 @SuppressWarnings("serial")
-public class Rodoviaria extends PessoaFisica implements Serializable {
+public class Rodoviaria extends PessoaJuridica implements Serializable {
 	
 	private String HoraAbertura;
 	
